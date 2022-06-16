@@ -29,3 +29,25 @@ from tensorflow.keras.preprocessing.text import Tokenizer
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import LSTM, Dense, Dropout, SpatialDropout1D, Embedding
 ```
+# Scattertext and Spacy
+We have used Scattertext and spacy to create a interactive html
+```py
+import spacy
+import scattertext as st
+#creating corpus object
+nlp = spacy.load('en_core_web_sm')
+corpus = st.CorpusFromPandas(data,
+                             category_col='sentiment',
+                             text_col='text',
+                             nlp=nlp).build()
+#creating html file
+html = st.produce_scattertext_explorer(
+       corpus,
+       category = "Positive",
+       category_name = "Positive Tweets",
+       not_category_name = "Negative Tweets",
+       width_in_pixels = 1000,
+       metadata = data["candidate"]
+    )
+open('Tweet_Analysis.html','wb').write(html.encode('utf-8'))
+```    
