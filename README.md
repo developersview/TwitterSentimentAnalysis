@@ -1,4 +1,5 @@
-# Twitter Sentiment Analysis 
+# Twitter Sentiment Analysis  <img src="./twt.png" width="30px" height="23px">
+
 > This project is Sentiment Analysis based on Twitter comments. The code is written in Python and we have used Jupyter Notebook.
 
 >Here I have used two Python Libary for Sentiment Analysis and Data Visualization
