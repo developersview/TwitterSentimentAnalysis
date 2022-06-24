@@ -52,3 +52,9 @@ html = st.produce_scattertext_explorer(
     )
 open('Tweet_Analysis.html','wb').write(html.encode('utf-8'))
 ```    
+---
+### SCREENSHOT
+
+The final output might look something like this:
+
+![image](https://github.com/developersview/TwitterSentimentAnalysis/blob/master/Tweet_Analysis.png)
